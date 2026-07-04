@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const _kBg = Color(0xFFF0F4FF);
 
-const String kContactEmail = 'tetsuji550@gmail.com';
+const String kContactEmail = 'supportcontact77@gmail.com';
 const String kAppName = '情報Ⅰ プログラミング対策';
 const String kPolicyEffectiveDate = '2026年7月2日';
 
