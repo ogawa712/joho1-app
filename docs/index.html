@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>情報Ⅰ プログラミング対策 - サポート</title>
+<title>情報Ⅰ プログラミング対策 - 共通テスト「情報I」プログラミング問題演習アプリ</title>
+<meta name="description" content="大学入学共通テスト「情報I」のプログラミング問題対策アプリ。Pythonの実行結果予想クイズと変数トレースで、コードを読む感覚を鍛えます。">
 <style>
   :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 32px 20px 80px;
+    margin: 0;
     line-height: 1.8;
     color: #1a1a2e;
     background: #f0f4ff;
@@ -18,51 +18,123 @@
   @media (prefers-color-scheme: dark) {
     body { color: #e8e8f0; background: #14162b; }
     a { color: #8fa8ff; }
-    .card { background: #1e2140 !important; border-color: #2c2f55 !important; }
+    .card, .shot { background: #1e2140 !important; border-color: #2c2f55 !important; }
+    .hero { background: linear-gradient(135deg,#1b2350,#0e1230) !important; }
   }
-  h1 { font-size: 22px; margin-bottom: 4px; }
-  .subtitle { color: #6b7280; font-size: 13px; margin-bottom: 32px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 80px; }
+  .hero {
+    background: linear-gradient(135deg,#4361ee,#2b44be);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  .icon {
+    width: 96px; height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 26px; margin: 0 0 6px; }
+  .hero .tagline { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+  .hero .pitch { font-size: 16px; max-width: 560px; margin: 0 auto; opacity: 0.95; }
+  section { margin-top: 40px; }
+  h2 { font-size: 18px; text-align: center; margin-bottom: 24px; }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
   .card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 20px;
-    margin-bottom: 20px;
   }
-  h2 { font-size: 16px; margin-top: 0; }
-  a { color: #4361ee; }
-  .contact {
-    display: inline-block;
-    margin-top: 8px;
-    font-weight: 600;
+  .card h3 { font-size: 14px; margin: 0 0 8px; }
+  .card p { font-size: 13px; color: #4b5563; margin: 0; }
+  @media (prefers-color-scheme: dark) { .card p { color: #b7bcd6; } }
+  .shots {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 4px 16px;
+    -webkit-overflow-scrolling: touch;
   }
-  footer { margin-top: 40px; font-size: 12px; color: #9ca3af; }
+  .shot {
+    flex: 0 0 auto;
+    width: 220px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    overflow: hidden;
+  }
+  .shot img { width: 100%; display: block; }
+  .links { text-align: center; margin-top: 8px; font-size: 13px; }
+  .links a { color: #4361ee; margin: 0 10px; }
+  footer { text-align: center; margin-top: 48px; font-size: 12px; color: #9ca3af; }
 </style>
 </head>
 <body>
-  <h1>情報Ⅰ プログラミング対策</h1>
-  <div class="subtitle">共通テスト対策 | プログラミング特化</div>
-
-  <div class="card">
-    <h2>お問い合わせ・サポート</h2>
-    <p>アプリの不具合、ご質問、ご要望などがございましたら、下記のメールアドレスまでご連絡ください。通常2〜3営業日以内に返信いたします。</p>
-    <a class="contact" href="mailto:supportcontact77@gmail.com">supportcontact77@gmail.com</a>
+  <div class="hero">
+    <img class="icon" src="assets/icon.png" alt="情報Ⅰ プログラミング対策 アイコン">
+    <h1>情報Ⅰ プログラミング対策</h1>
+    <div class="tagline">共通テスト対策 | プログラミング特化</div>
+    <p class="pitch">
+      「情報I」のプログラミングは暗記より慣れが大切。<br>
+      Pythonの実行結果を予想するクイズと変数トレースで、<br>
+      コードを読む「感覚」を鍛える問題演習アプリです。
+    </p>
   </div>
 
-  <div class="card">
-    <h2>よくある質問</h2>
-    <p><strong>Q. 広告が表示されます。消すことはできますか？</strong><br>
-    A. 設定画面から「広告を非表示にする」プランにご登録いただくことで、広告なしでご利用いただけます。</p>
-    <p><strong>Q. 学習データは他の端末に引き継げますか？</strong><br>
-    A. 学習データは端末内にのみ保存されるため、現在は他端末への引き継ぎには対応していません。</p>
-  </div>
+  <div class="wrap">
+    <section>
+      <h2>できること</h2>
+      <div class="features">
+        <div class="card">
+          <h3>実行結果予想クイズ</h3>
+          <p>実際のPythonコードを読んで、出力結果を選択肢から予想。読解の精度が上がります。</p>
+        </div>
+        <div class="card">
+          <h3>変数トレースで可視化</h3>
+          <p>変数がどう変化していくかを1行ずつ確認でき、処理の流れが目で見てわかります。</p>
+        </div>
+        <div class="card">
+          <h3>3段階・150問収録</h3>
+          <p>初級・中級・上級 各50問。ループ、条件分岐、再帰、リスト操作などを幅広くカバー。</p>
+        </div>
+        <div class="card">
+          <h3>間違えた問題を復習</h3>
+          <p>間違えた問題は自動記録され、あとでまとめて解き直せます。</p>
+        </div>
+        <div class="card">
+          <h3>あとで見直す</h3>
+          <p>気になる問題をブックマークして、好きなタイミングで見直せます。</p>
+        </div>
+        <div class="card">
+          <h3>学習の進捗が見える</h3>
+          <p>正答率・連続正解・学習時間の目安をホーム画面でいつでも確認できます。</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h2>関連ページ</h2>
-    <p><a href="privacy.html">プライバシーポリシー</a></p>
-    <p><a href="terms.html">利用規約</a></p>
-  </div>
+    <section>
+      <h2>スクリーンショット</h2>
+      <div class="shots">
+        <div class="shot"><img src="assets/home.png" alt="ホーム画面"></div>
+        <div class="shot"><img src="assets/question.png" alt="問題画面"></div>
+        <div class="shot"><img src="assets/result.png" alt="結果・解説画面"></div>
+      </div>
+    </section>
 
-  <footer>© 2026 情報Ⅰ プログラミング対策</footer>
+    <section>
+      <div class="links">
+        <a href="support.html">サポート</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+      </div>
+    </section>
+
+    <footer>© 2026 情報Ⅰ プログラミング対策</footer>
+  </div>
 </body>
 </html>
